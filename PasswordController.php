@@ -1,12 +1,9 @@
 public function password_update(Request $request){
 
         $this->validate($request, [
-
             'old_password' => 'required',
             'new_password' => 'required|string|min:8|confirmed',
         ]);
-
-
 
         $hashedPassword = Auth::user()->password;
 
